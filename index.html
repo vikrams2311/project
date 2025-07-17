@@ -2,50 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple Navigation</title>
+  <title>Welcome Page</title>
   <style>
-    nav {
-      background-color: #333;
-      padding: 10px;
-    }
-    nav a {
+    #welcomeBanner {
+      background-color: blue;
       color: white;
-      margin-right: 15px;
-      text-decoration: none;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
     }
-    section {
-      padding: 50px;
-      border-bottom: 1px solid #ccc;
+
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+      padding: 5px;
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ Step 4: Navigation Bar -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#events">Events</a>
-    <a href="#contact">Contact</a>
-    <a href="help.html" target="_blank">Help</a>
-  </nav>
+  <div id="welcomeBanner">
+    Welcome back, User! 🎉
+  </div>
 
-  <!-- ✅ Step 5: Section for Home -->
-  <section id="home">
-    <h2>Home</h2>
-    <p>Welcome to our homepage!</p>
-  </section>
+  <p>
+    Don’t miss our 
+    <span style="color: red; font-weight: bold;">limited-time offer</span>!
+  </p>
 
-  <!-- ✅ Step 6: Section for Events -->
-  <section id="events">
-    <h2>Events</h2>
-    <p>Details of upcoming events will be shown here.</p>
-  </section>
-
-  <!-- ✅ Step 7: Section for Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Contact us at: contact@example.com</p>
-  </section>
+  <p class="highlight">
+    Important: Update your profile to get rewards.
+  </p>
 
 </body>
 </html>
