@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Video Invite</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #eef2f3;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    #status {
+      font-weight: bold;
+      color: green;
+      margin: 10px 0;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 340px;
+      border: 4px solid #ccc;
+      border-radius: 8px;
+    }
+
+    form {
+      margin-top: 30px;
+      background: white;
+      padding: 20px;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎬 Event Promo Video</h2>
+  <!-- Replace VIDEO_ID with actual YouTube video ID -->
+  <iframe id="promoVideo" src="https://youtu.be/5GlS9pyqBgM?si=5go7RsLhrd_cpaSY" allowfullscreen onload="videoReady()"></iframe>
+  <p id="status">Loading video...</p>
+
+  <form id="registerForm">
+    <h3>Quick Interest Form</h3>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    let formSubmitted = false;
+
+    function videoReady() {
+      document.getElementById("status").textContent = "✅ Video ready to play!";
+    }
+
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      formSubmitted = true;
+      alert("Thank you for your interest!");
+    });
+
+    window.onbeforeunload = function () {
+      if (!formSubmitted) {
+        return "You have not submitted the form yet. Are you sure you want to leave?";
+      }
+    };
+  </script>
+
+</body>
+</html>
